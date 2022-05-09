@@ -51,10 +51,8 @@ body {
     background-color: #ffffff;
 }
 
-section {
-    /* overflow: hidden; */
-/*    overflow-x: hidden;*/
-/*    overflow-y: auto;*/
+.main {
+    overflow: hidden;
 }
 
 *,
@@ -187,7 +185,7 @@ ul {
 /* hero */
 
 .hero {
-    overflow: hidden;
+    
 }
 
 .hero__inner {
@@ -325,7 +323,7 @@ ul {
 /* services */
 
 .services {
-    overflow: hidden;   
+      
 }
 
 .services__inner {
