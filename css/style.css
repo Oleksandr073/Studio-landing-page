@@ -644,7 +644,7 @@ ul {
     position: relative;
 }
 
-.reviews__main-photo img {
+.reviews__main-img {
     display: block;
     width: 100%;
     height: 100%;
@@ -693,12 +693,12 @@ ul {
 
 .reviews__review {
     width: 40%;
-    margin: 0 20px;
+    margin: 0 40px;
 }
 
 .reviews__content {
     margin-bottom: 50px;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 .reviews__name {
@@ -716,6 +716,7 @@ ul {
 
 .reviews__pagination {
     display: flex;
+    grid-gap: 8px;
     padding-left: 36px; /* 40-4 */
 }
 
@@ -729,9 +730,7 @@ ul {
 
 .swiper-pagination-bullet-active {
     background-color: #2639ED;
-}
-
-
+}   
 
 .reviews__circle {
     width: 30%;
@@ -769,12 +768,13 @@ ul {
     z-index: 2;
 }
 
-.reviews__photo img {
+.reviews__img {
     display: block;
     width: 100%;
     height: 100%;
 
     border-radius: 50%;
+    cursor: pointer;
 
     position: absolute;
     top: 0;
@@ -784,60 +784,82 @@ ul {
     object-fit: cover;
 }
 
-#review_1 {
-
+.reviews__photo--zoom {
+    animation: 1s zoom;
 }
 
-#review_2 {
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+.reviews__photo:nth-child(1) {
     width: 100px;
     padding-top: 100px;
     top: 45px;
     left: 20px;
 }
 
-#review_3 {
+.reviews__photo:nth-child(2) {
     width: 70px;
     padding-top: 70px;
     top: 0;
     left: 50%;
 }
 
-#review_4 {
+.reviews__photo:nth-child(3) {
     width: 55px;
     padding-top: 55px;
     top: 60px;
     left: 80%;
 }
 
-#review_5 {
+.reviews__photo:nth-child(4) {
     width: 120px;
     padding-top: 120px;
     top: 30%;
     left: 40%;
 }
 
-#review_6 {
+.reviews__photo:nth-child(5) {
     width: 70px;
     padding-top: 70px;
     top: 40%;
     left: 80%;
 }
 
-#review_7 {
+.reviews__photo:nth-child(6) {
     width: 55px;
     padding-top: 55px;
     top: 50%;
     left: 50px;
 }
 
-#review_8 {
+.reviews__photo:nth-child(7) {
     width: 100px;
     padding-top: 100px;
     top: 70%;
     left: 30%;
 }
 
-#review_9 {
+.reviews__photo:nth-child(8) {
     width: 70px;
     padding-top: 70px;
     top: 70%;
