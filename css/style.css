@@ -310,6 +310,7 @@ ul {
     width: 75%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .clients__logo {
@@ -317,8 +318,14 @@ ul {
     padding: 0 5px;
 }
 
+/*
 .clients__logo svg {
     width: 100%;
+}
+*/
+
+.clients__logo img {
+    width: 90%;
 }
 
 /* services */
@@ -1153,6 +1160,11 @@ ul {
         width: 100%;
         margin-right: 0;
     }
+
+    .clients__subtitle {
+        margin-bottom: 30px;
+    }
+
     .clients__logos {
         width: 100%;
     }
@@ -1285,6 +1297,24 @@ ul {
 
 @media (max-width: 768px) {
 
+    /* clients */
+
+    .clients__logos {
+        flex-wrap: wrap;
+    }
+
+    .clients__logo {
+        width: 40%;
+    }
+
+    .clients__logo:nth-child(-n+2){
+        margin-bottom: 35px;
+    }
+
+    .clients__logo img {
+        width: 100%;
+    }
+
     /* services */
 
     .services__card {
@@ -1307,6 +1337,7 @@ ul {
 
     .reviews__main-photo {
         width: 50%;
+        margin-left: 0;
         padding-top: 50%;
     }
 
@@ -1338,6 +1369,20 @@ ul {
 
     .contact__btn {
         width: 100%;
+    }
+
+    /* footer */
+
+    .footer__menu {
+        flex-wrap: wrap;
+    }
+
+    .menu-footer__column {
+/*        width: 45%;*/
+    }
+
+    .menu-footer__column:not(:last-child) {
+/*        margin: 0;*/
     }
 
 }
